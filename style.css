@@ -78,3 +78,31 @@ button:hover {
 p {
     color: #999;
 }
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin-top: 20px; /* 화면 크기가 작을 때 마진 조정 */
+    }
+
+    input[type="text"] {
+        width: 100%; /* 화면 크기가 작을 때 입력 필드가 전체 너비를 차지하도록 조정 */
+        margin-right: 0;
+        margin-bottom: 10px; /* 버튼과의 간격 조정 */
+    }
+
+    button {
+        width: 100%; /* 화면 크기가 작을 때 버튼이 전체 너비를 차지하도록 조정 */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 24px; /* 작은 화면에서는 헤더 크기 조정 */
+    }
+
+    .result-title {
+        font-size: 16px; /* 작은 화면에서는 결과 타이틀 크기 조정 */
+    }
+}
