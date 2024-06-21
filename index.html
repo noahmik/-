@@ -11,10 +11,18 @@
         <h1>부산 맛집 찾기</h1>
         <div class="search-box">
             <input type="text" id="district" placeholder="구군 이름을 입력하세요">
-            <button onclick="fetchRestaurants()">검색</button>
+            <button onclick="search()">검색</button>
         </div>
-        <div id="results"></div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function search() {
+            const district = document.getElementById('district').value;
+            if (district) {
+                window.location.href = `results.html?district=${encodeURIComponent(district)}`;
+            } else {
+                alert('구군 이름을 입력하세요.');
+            }
+        }
+    </script>
 </body>
 </html>
