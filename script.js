@@ -1,11 +1,11 @@
 let currentPage = 1;
-const itemsPerPage = 5;
+const itemsPerPage = 1;
 
 async function fetchRestaurants(district, page = 1) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
 
-    const apiKey = ''; // 공공데이터 포털에서 발급받은 인증키
+    const apiKey = ''; // 공공데이터 포털에서 발급받은 인증키를 입력하세요
     const url = `http://apis.data.go.kr/6260000/FoodService/getFoodKr?serviceKey=${apiKey}&numOfRows=50&pageNo=1&resultType=json&GUGUN_NM=${encodeURIComponent(district)}`;
 
     try {
