@@ -25,7 +25,8 @@ async function fetchRestaurants(district, page = 1) {
         if (filteredItems.length > 0) {
             displayPage(filteredItems, page, itemsPerPage);
         } else {
-            resultsDiv.innerHTML = '<p>해당 구군에 대한 결과가 없습니다.</p>';
+            alert("부산시 내의 구군 정보를 입력해주세요.")
+            resultsDiv.innerHTML = '<p>부산시 내의 구군 정보를 입력해주세요.</p>';
         }
     } catch (error) {
         console.error('Error fetching data:', error);
